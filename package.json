@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "npx @google-cloud/functions-framework --target=helloPubSub"
+  },
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.0.0",
+    "mailgun.js": "^10.2.1",
+    "mysql2": "^3.9.3",
+    "sequelize": "^6.37.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "sequelize-cli": "^6.6.2"
+  }
+}
