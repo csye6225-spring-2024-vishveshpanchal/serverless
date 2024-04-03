@@ -1,8 +1,8 @@
 node_modules
-run_scripts.sh
 .env
 .DS_Store
-assignment_07.txt
+package-lock.json
+function-source.zip
 
 # Logs
 logs
