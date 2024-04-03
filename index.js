@@ -1,4 +1,4 @@
-require('dotenv').config();
+// require('dotenv').config();
 const functions = require('@google-cloud/functions-framework');
 const formData = require('form-data');
 const Mailgun = require('mailgun.js');
@@ -24,10 +24,18 @@ const subjectEmail = "CSYE6225 WebApp Email Verification";
 
 const generateLinkViaUUID = async (uuid, email) => {
     
-  const verificationLink = "http://" 
+  // const verificationLink = "http://" 
+  //                         + webappDomainName.toString() 
+  //                         + ":" 
+  //                         + webappPort.toString() 
+  //                         + "/v1/user/verify?email=" 
+  //                         + email.toString() 
+  //                         + "&token=" + uuid.toString();
+
+  const verificationLink = "https://" 
                           + webappDomainName.toString() 
-                          + ":" 
-                          + webappPort.toString() 
+                          // + ":" 
+                          // + webappPortGlobal.toString() 
                           + "/v1/user/verify?email=" 
                           + email.toString() 
                           + "&token=" + uuid.toString();
@@ -98,11 +106,11 @@ functions.cloudEvent('helloPubSub', async cloudEvent => {
   .then(msg => console.log(msg))
   .catch(err => console.log(err));
 
-  db.closeDatabaseConnection().then(() => {
-    console.log(`index.js: closeDatabaseConnection successful`);
-  }).catch((error) => {
-      console.log(`index.js: Error at closeDatabaseConnection: ${error}`);
-  });
+//  db.closeDatabaseConnection().then(() => {
+//    console.log(`index.js: closeDatabaseConnection successful`);
+//  }).catch((error) => {
+//      console.log(`index.js: Error at closeDatabaseConnection: ${error}`);
+//  });
 
   console.log(`Verification link sent to user: ${email}`);
 });
