@@ -121,11 +121,11 @@ functions.cloudEvent('helloPubSub', async cloudEvent => {
 
 // // require('dotenv').config();
 // const functions = require('@google-cloud/functions-framework');
-// // const var_MAILGUN_API_KEY = "01b114030ba1d1ee9d19b95fe504c22a-309b0ef4-8b34a4f1";
+// // const var_MAILGUN_API_KEY = "keyyyy";
 // const formData = require('form-data');
 // const Mailgun = require('mailgun.js');
 // const mailgun = new Mailgun(formData);
-// const mg = mailgun.client({username: 'api', key: 'f6be8171fb03535257f402ad7df5ec08-309b0ef4-d516244b'});
+// const mg = mailgun.client({username: 'api', key: 'keyyyyyyy'});
 // // const mg = mailgun.client({username: 'api', key: process.env.MAILGUN_API_KEY});
 
 
